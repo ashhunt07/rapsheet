@@ -1,0 +1,451 @@
+    body {
+        width: 100%;
+        display: block;
+        background-color: #fefefe;
+        font-size: 16px;
+        line-height: 1.5em;
+        padding-bottom: 3em;
+    }
+    
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h5,
+    p {
+        color: #444;
+    }
+    
+    .darkBg {
+        background-color: #363636;
+    }
+    
+    #wrapper {
+        min-height: 100vh;
+    }
+    
+    header {
+        width: 100%;
+        height: auto;
+        position: static;
+        top: 0;
+        z-index: 10;
+        padding: 0 2.5%;
+    }
+    
+    main {
+        min-height: 95vh;
+        width: 90%;
+        margin: 0 auto;
+        padding: 2em 0 5em;
+    }
+    
+    .nav {
+        margin-top: 1em;
+    }
+    
+    nav .logo {
+        width: 45%;
+    }
+    
+    .nav-link {
+        color: #EDB020;
+    }
+    
+    .nav-link:hover {
+        color: #24B6FF;
+    }
+    
+    .nav-item,
+    .nav-link {
+        width: 100%;
+        text-align: right;
+        display: block;
+        clear: both;
+        padding-top: .5em;
+    }
+    
+    .custom-toggler .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(237, 176, 32)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+    }
+    
+    .custom-toggler,
+    .custom-toggler:active,
+    .custom-toggler:focus {
+        border: 0px!important;
+        outline: 0px!important;
+        box-shadow: 0px!important;
+    }
+    /* Go Back Link */
+    
+    .backOption {
+        color: #24B6FF;
+        text-decoration: none;
+    }
+    
+    .backOption:hover,
+    .backOption:active {
+        color: #EDB020;
+        text-decoration: none;
+    }
+    /* Logout */
+    
+    .logout {
+        background-color: #24B6FF;
+        color: #fff;
+        border: 0px none;
+    }
+    /* Index */
+    
+    .indexBg {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../assets/live-show-header2.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    
+    .indexHead {
+        height: auto;
+        width: 100%;
+        padding: 4em 20%;
+        color: #fff;
+    }
+    
+    .indexHead,
+    h1 {
+        color: #fff;
+        text-align: center;
+        font-size: 2.25em;
+    }
+    
+    .indexHead,
+    h3 {
+        color: #fff;
+        text-align: center;
+        font-size: 1.25em;
+    }
+    
+    .form-group {
+        width: 100%;
+        display: block;
+    }
+    
+    #indexCopy {
+        width: 90%;
+        margin: 0 auto;
+        padding: 2em 0;
+    }
+    
+    .signIn {
+        background-color: transparent;
+        border: 0px none;
+    }
+    
+    .loginLinks {
+        font-size: 14px;
+    }
+    
+    .pts {
+        background-color: #EDB020;
+    }
+    
+    .icons .card {
+        border: 0px none;
+        background-color: transparent;
+        padding: 3em 0 1.5em;
+    }
+    
+    .card-img-top {
+        width: 30%;
+    }
+    /* SignUp */
+    
+    .form-check-input {
+        height: 25px;
+        width: 25px;
+        background-color: #eee;
+        border-radius: 15px;
+    }
+    /* Login */
+    
+    .loginBg {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../assets/live-show-header.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        min-height: 100vh;
+    }
+    
+    .loginSec {
+        text-align: center;
+    }
+    /* Band Profile */
+    
+    .bandIntro {
+        width: 95%;
+        margin: 0 auto;
+    }
+    
+    .flickity-viewport,
+    .flickity-slider {
+        height: 250px;
+    }
+    
+    .bandHead {
+        height: auto;
+        width: 100%;
+        min-height: 100%;
+        overflow-y: hidden;
+    }
+    
+    .gallery-cell,
+    .gallery-cell-img {
+        height: 100%;
+        width: auto;
+        min-width: 100%;
+        overflow-y: hidden;
+    }
+    /* Button Changes */
+    
+    .flickity-prev-next-button {
+        color: #fff;
+        background-color: transparent;
+    }
+    
+    .flickity-prev-next-button:hover,
+    .flickity-prev-next-button:active {
+        color: #fff;
+        background-color: transparent;
+    }
+    
+    #bandDetails {
+        background-color: #EDB020;
+        padding: .75em 5% .25em;
+        margin-bottom: 2em;
+    }
+    /* Venue Profile */
+    
+    .related {
+        margin-top: 8em;
+    }
+    /* Upload Images */
+    /* Upload Images */
+    /* Upload Images */
+    
+    .imagePreview {
+        width: 100%;
+        height: 150px;
+        background-position: center center;
+        background: url(http://cliquecities.com/assets/no-image-e3699ae23f866f6cbdf8ba2443ee5c4e.jpg);
+        background-color: #fff;
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: inline-block;
+        box-shadow: 0px -3px 6px 2px rgba(0, 0, 0, 0.05);
+    }
+    
+    .imageUpload {
+        width: 100%;
+        height: 100px;
+        background-position: center center;
+        background: url(http://cliquecities.com/assets/no-image-e3699ae23f866f6cbdf8ba2443ee5c4e.jpg);
+        background-color: #fff;
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: inline-block;
+        box-shadow: 0px -3px 6px 2px rgba(0, 0, 0, 0.05);
+    }
+    
+    .btn-primary {
+        display: block;
+        border-radius: 0px;
+        box-shadow: 0px 4px 6px 2px rgba(0, 0, 0, 0.05);
+        margin-top: -5px;
+    }
+    
+    .imgUp {
+        margin-bottom: 15px;
+    }
+    
+    .del {
+        position: absolute;
+        top: 0px;
+        right: 15px;
+        width: 30px;
+        height: 30px;
+        text-align: center;
+        line-height: 30px;
+        background-color: rgba(255, 255, 255, 0.6);
+        cursor: pointer;
+    }
+    
+    .imgAdd {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: #EDB020;
+        color: #fff;
+        box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        line-height: 30px;
+        margin-top: 0px;
+        cursor: pointer;
+        font-size: 15px;
+    }
+    
+    .imgPlus {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: #EDB020;
+        color: #fff;
+        box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        line-height: 30px;
+        margin-top: 0px;
+        cursor: pointer;
+        font-size: 15px;
+    }
+    /* Contact Form */
+    
+    #contactWrap {
+        width: 95%;
+        margin: 5em 2%;
+    }
+    
+    .contact {
+        color: #fff;
+    }
+    
+    .contact h1 {
+        text-align: left;
+    }
+    
+    .form-contact {
+        width: 100%;
+    }
+    /* Footer */
+    
+    footer {
+        width: 100%;
+        bottom: 0;
+        background-color: #363638;
+    }
+    
+    footer p {
+        color: #d1d1d1;
+    }
+    /* Small devices (landscape phones, 576px and up) */
+    
+    @media (min-width: 576px) {
+        .form-group {
+            width: 100%;
+        }
+        /* Band Profile */
+        .flickity-viewport,
+        .flickity-slider {
+            height: 300px;
+        }
+        .bandHead {
+            height: auto;
+            min-height: 100%;
+            min-width: 100%;
+        }
+        .gallery-cell,
+        .gallery-cell-img {
+            height: auto;
+            width: 100%;
+            min-height: 100%;
+            min-width: 100%;
+            overflow-y: auto;
+        }
+    }
+    /* Medium devices (tablets, 768px and up) */
+    
+    @media (min-width: 768px) {
+        .form-group {
+            width: 40%;
+            display: inline-block;
+        }
+        /* Band Profile */
+        .flickity-viewport,
+        .flickity-slider {
+            height: 350px;
+        }
+        .bandHead {
+            height: auto;
+            min-width: 100%;
+        }
+        .gallery-cell,
+        .gallery-cell-img {
+            height: auto;
+            min-height: 100%;
+            width: 100%;
+            overflow-y: hidden;
+            top: -30%;
+        }
+        #contactWrap {
+            width: 100%;
+            margin: 5em 5%;
+        }
+    }
+    /* Large devices (desktops, 992px and up) */
+    
+    @media (min-width: 992px) {
+        .nav-item,
+        .nav-link {
+            width: auto;
+            display: inline-block;
+            padding-top: .25em;
+        }
+        #indexCopy {
+            width: 60%;
+            margin: 0 auto;
+            padding: 3em 0 1em;
+        }
+        /* Band Profile */
+        .flickity-viewport,
+        .flickity-slider {
+            height: 350px;
+        }
+        .bandHead {
+            height: auto;
+            min-width: 100%;
+        }
+        .gallery-cell,
+        .gallery-cell-img {
+            height: auto;
+            min-height: 100%;
+            width: 100%;
+            overflow-y: hidden;
+        }
+    }
+    /* Extra large devices (large desktops, 1200px and up) */
+    
+    @media (min-width: 1200px) {
+        .nav-item,
+        .nav-link {
+            width: auto;
+            text-align: right;
+            /* padding-top: 0; */
+        }
+        .form-group {
+            width: 30%;
+            display: inline-block;
+        }
+        /* Band Profile */
+        .flickity-viewport,
+        .flickity-slider {
+            height: 500px;
+        }
+        .bandHead {
+            height: auto;
+            width: 100%;
+        }
+        .gallery-cell,
+        .gallery-cell-img {
+            height: auto;
+            width: 100%;
+            overflow-y: hidden;
+        }
+    }

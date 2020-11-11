@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Name | Find a Venue
+        <!-- Use Handlebars for titles? -->
+    </title>
+
+    <!-- CSS Styles -->
+    <link rel="stylesheet" type="text/css" href="../styles/reset.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="../styles/style.css" />
+
+    <!-- Javascript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+    <!-- Google Fonts -->
+
+</head>
+
+<body id="signUp" class="darkBg">
+
+    <div id="wrapper">
+
+        <!-- Header with Logo and Navigation -->
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a href="/index"><img class="logo" src="../assets/rapsheet-logo.png" alt="rapsheet logo"> </a>
+
+
+                <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                    <ul class="nav">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="/band">Profile</a>
+                        </li>
+                        </li>
+                        <a href="/logout"><button type="button" class="btn logout ml-3">Log Out</button></a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-3 row-cols-xl-4">
+                <div class="col mb-3">
+                    <div class="card">
+                        <img class="col mt-3 venuepic" src="https://via.placeholder.com/500x300" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Genre</p>
+                            <a href="#"><button type="button" class="btn btn-warning my-1">Learn More</button></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-3">
+                    <div class="card">
+                        <img class="col mt-3 venuepic" src="https://via.placeholder.com/500x300" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Genre</p>
+                            <a href="#"><button type="button" class="btn btn-warning my-1">Learn More</button></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-3">
+                    <div class="card">
+                        <img class="col mt-3 venuepic" src="https://via.placeholder.com/500x300" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Genre</p>
+                            <a href="#"><button type="button" class="btn btn-warning my-1">Learn More</button></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-3">
+                    <div class="card">
+                        <img class="col mt-3 venuepic" src="https://via.placeholder.com/500x300" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Genre</p>
+                            <a href="#"><button type="button" class="btn btn-warning my-1">Learn More</button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="shadow-lg pt-3 pb-1.5 fixed-bottom">
+        <p class="text-center">&COPY; Footer</p>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        $.get("/api/getVenues", (data) => {
+            console.log(data.dbUser);
+            const cardTitles = document.querySelectorAll(".card-title");
+            const cardText = document.querySelectorAll(".card-text");
+            const venuePic = document.querySelectorAll(".venuepic");
+            cardTitles.forEach((name, i) => {
+                name.innerHTML = data.dbUser[i].venueName;
+            })
+            cardText.forEach((address,i) => {
+                address.innerHTML = `${data.dbUser[i].User.address} ${data.dbUser[i].User.address2}, ${data.dbUser[i].User.city} ${data.dbUser[i].User.state}`
+            })
+            venuePic.forEach((pic,i) => {
+                pic.setAttribute("src", data.dbUser[i].profPic1);
+            })
+
+
+        });
+    </script>
+</body>
+
+</html>
